@@ -32,13 +32,12 @@ const Card = () => {
           })
           setSingleCardData([...singleCardData,  singleCard])
         }
-
+        
         setHourCount(hourCount)
-        console.log(hourCount)
+        const hourRemaining = 20 - hourCount
+        setHourRemaining(hourRemaining)
+        
         if(hourCount >= 20){
-          const hourRemaining = hourCount - 20
-          setHourRemaining(hourRemaining)
-          console.log(hourRemaining)
            toast('Limited Hours')
         }
        
