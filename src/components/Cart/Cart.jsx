@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Cart = ({singleCardData,hourCount,hourRemaining}) => {
+const Cart = ({singleCardData,hourCount,hourRemaining,priceCount}) => {
 
 
   return (  
@@ -20,21 +20,24 @@ const Cart = ({singleCardData,hourCount,hourRemaining}) => {
          
             
         {
+            singleCardData.map((courseName,idx)=>( 
 
-          singleCardData.map((courseName,idx)=>(            
-          <ol key={courseName.id}>{idx+1}.{courseName.title} </ol> ))
+            <ol key={courseName.id}>{idx+1}.{courseName.title} 
+            </ol>
+           ))
             
             }
+            
             
         </ol>
         <br />
         <hr />
         
        
-        <h3>Total Credit Hour:{hourCount} </h3>
+        <h3>Total Credit Hour: {hourCount} hr </h3>
           
         <hr />
-        <h3>Total Price:{} </h3>
+        <h3>Total Price: {priceCount} USD</h3>
 
 
        </div>

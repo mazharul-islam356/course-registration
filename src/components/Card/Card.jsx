@@ -9,8 +9,10 @@ import { BiDollar } from 'react-icons/bi';
 const Card = () => {
     const [cardData,setCardData] = useState([])
     const [singleCardData,setSingleCardData] = useState([])
-    const [hourCount,setHourCount] = useState([])
+    const [hourCount,setHourCount] = useState(0)
+    let [priceCount,setPriceCount] = useState(0)
     const [hourRemaining,setHourRemaining] = useState(20)
+
  
 
 
@@ -20,8 +22,9 @@ const Card = () => {
         const isExiest = singleCardData.find((item)=>
         singleCard.id === item.id
         ) 
-
+        let priceCount = singleCard.price
         let hourCount = singleCard.credit
+        
         if(isExiest){
           return toast('Alredy booked')
         }else{
@@ -31,14 +34,28 @@ const Card = () => {
           })
           setSingleCardData([...singleCardData,  singleCard])
         }
+
         
-        setHourCount(hourCount)
-        const hourRemaining = 20 - hourCount
-        setHourRemaining(hourRemaining)
+
+       
         
         if(hourCount >= 20){
            toast('Limited Hours')
+        }else{
+          setHourCount(hourCount)
+          const hourRemaining = 20 - hourCount
+          setHourRemaining(hourRemaining)
+
+          singleCardData.forEach((prices)=>{
+            priceCount += prices.price
+            setPriceCount(priceCount)
+          })
         }
+
+        
+        
+        
+
          
     }
 
@@ -102,7 +119,7 @@ const Card = () => {
 </div>
     </div>
 
-    <Cart singleCardData={singleCardData} hourCount={hourCount} hourRemaining={hourRemaining}></Cart>
+    <Cart singleCardData={singleCardData} hourCount={hourCount} hourRemaining={hourRemaining} priceCount={priceCount}></Cart>
 
     </div>
     
