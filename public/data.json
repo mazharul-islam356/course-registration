@@ -3,7 +3,7 @@
       "id": 1,
       "image": "https://i.ibb.co/gMW264f/course-1663052056.jpg",
       "title": "Web devolopment",
-      "description": "Web development is the creation, building, and maintenance of websites and web applications. It encompasses a wide range of skills, including.",
+      "description": "Web development is the art and science of building and maintaining websites.",
       "price": 12000,
       "credit": 7
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "image": "https://i.ibb.co/Wx3cSxK/seo.jpg",
       "title": "SEO",
-      "description": "SEO is the process of optimizing your website to rank higher in search engine results pages (SERPs). This can help you attract more visitors to your website and boost your business.",
+      "description": "SEO is optimizing your website to rank higher in search results, so you can get more organic traffic.",
       "price": 16000,
       "credit": 5
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "image": "https://i.ibb.co/DKSr1nR/graphics.jpg",
       "title": "Graphics Design",
-      "description": "Graphic designers create visually appealing and informative content that communicates ideas and messages.",
+      "description": "Visual communication through the use of typography, images, and color.Creating visually appealing and informative content.",
       "price": 25000,
       "credit": 2
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "image": "https://i.ibb.co/8jh6Czz/video-editing.jpg",
       "title": "Video editing",
-      "description": "Video editing can be used to create a wide variety of content, including movies, TV shows, commercials, music videos, and social media posts. It is a powerful tool that can be used to tell stories, entertain audiences, and inform viewers.",
+      "description": "Video editing is the art of storytelling through the arrangement of moving images and sound.",
       "price": 19000,
       "credit": 6
     },
@@ -35,7 +35,7 @@
       "id": 5,
       "image": "https://i.ibb.co/dMSPtyb/digital-marketing.jpg",
       "title": "Digital Marketing",
-      "description": "Digital marketing is the use of online channels to reach and engage potential customers. It helps businesses to build brand awareness, generate leads, and drive sales.",
+      "description": "Digital marketing is the art of connecting with your customers where they are: online.",
       "price": 34000,
       "credit": 3
     },
@@ -43,7 +43,7 @@
       "id": 6,
       "image": "https://i.ibb.co/NL7Ch8c/cyber.jpg",
       "title": "Cyber Security",
-      "description": "Protect your digital world from cyber attacks with strong passwords, software updates, and awareness.",
+      "description": "Cybersecurity is the practice of protecting systems, networks, and data from cyber attacks.",
       "price": 10000,
       "credit": 1
     },
@@ -51,7 +51,7 @@
       "id": 7,
       "image": "https://i.ibb.co/YkhY6zx/Film-Making-Courses.jpg",
       "title": "Flim Making",
-      "description": "**Filmmaking in 2023 is a collaborative art form that uses cutting-edge technology to tell stories in visually stunning ways.",
+      "description": "Filmmaking is a collaborative art form that uses cutting-edge technology to tell stories in visually stunning ways.",
       "price": 23000,
       "credit": 10
     },
@@ -59,7 +59,7 @@
       "id": 8,
       "image": "https://i.ibb.co/YpyTVnm/fb-marketing.jpg",
       "title": "Facebook Marketing",
-      "description": "With Facebook ads, you can reach your target audience with laser precision, driving traffic to your website or landing page, generating leads, and increasing sales.",
+      "description": "Facebook marketing is connecting your brand with the right people at the right time.",
       "price": 9000,
       "credit": 4
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "image": "https://i.ibb.co/D4zF1vg/photography.jpg",
         "title": "Photography",
-        "description": "Photography is the art of capturing light to tell stories, evoke emotions, and document history. It is a powerful tool for connecting with the world around us and preserving our memories.",
+        "description": "Photography is the art of capturing light and moments, to tell stories and evoke emotions.",
         "price": 18000,
         "credit": 2
       }

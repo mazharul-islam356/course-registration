@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-key */
 const Cart = ({singleCardData,hourCount,hourRemaining}) => {
 
 
@@ -31,14 +30,7 @@ const Cart = ({singleCardData,hourCount,hourRemaining}) => {
         
        
         <h3>Total Credit Hour:{hourCount} </h3>
-        
-        
-        
-       
-        
-        
-       
-        
+          
         <hr />
         <h3>Total Price:{} </h3>
 
@@ -46,10 +38,6 @@ const Cart = ({singleCardData,hourCount,hourRemaining}) => {
        </div>
        
       </div>
-
-
-
-
 
     </div>
   );

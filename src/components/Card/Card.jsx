@@ -1,10 +1,9 @@
-/* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
+import { HiOutlineBookOpen } from 'react-icons/hi2';
+import { BiDollar } from 'react-icons/bi';
 
 
 const Card = () => {
@@ -40,18 +39,16 @@ const Card = () => {
         if(hourCount >= 20){
            toast('Limited Hours')
         }
-       
-
-        
-    
+         
     }
-
 
     useEffect(()=>{
         fetch('../data.json')
         .then(res=>res.json())
         .then(data=>setCardData(data))
     },[])
+
+
 
   return (
     <div>
@@ -63,33 +60,38 @@ const Card = () => {
     <div className="w-[1082px] mr-4 flex items-center justify-center">
 
     <div className="flex flex-wrap gap-4">
-  {
-  cardData.map((singleCard)=>(
+
+  {cardData.map((singleCard)=>(
           
                 
-<div key={singleCard.id} className="card w-[340px] bg-base-100 shadow-xl">
+<div key={singleCard.id} className="card w-[340px] h-[500px] pt-2 bg-base-100 shadow-xl">
 <figure className="px-6 pt-8">
   <img
     src={singleCard.image}
-    alt=""
+    alt="#"
     className="rounded-xl"
   />
 </figure>
 <div className="card-body items-center text-center">
   <h2 className="card-title font-bold">{singleCard.title}</h2>
-  <p>{singleCard.description}</p>
+
+  <h2>{singleCard.description}</h2>
 
  
-  <div className="flex gap-16 mt-4">
+  <div className="flex gap-1 mt-6">
+
+  <p className="text-xl mt-[2px]"><BiDollar></BiDollar></p>
     <div>
-      <p><span className="font-bold">Price:</span> {singleCard.price} $</p>
+      <p><span className="font-bold">Price:</span> {singleCard.price} </p>
     </div>
+  <p className="text-2xl ml-4"><HiOutlineBookOpen></HiOutlineBookOpen></p>
     <div>
+      
       <p><span className="font-bold">Credit:</span> {singleCard.credit}hr</p>
     </div>
   </div>
   <div className="card-actions">
-    <button onClick={()=>handleSelectbtn(singleCard)} className="btn btn-outline btn-info mt-2">Select</button>
+    <button onClick={()=>handleSelectbtn(singleCard)} className="btn btn-outline btn-info mt-4">Select</button>
     <ToastContainer />
   </div>
 </div>
