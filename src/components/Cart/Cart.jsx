@@ -12,16 +12,18 @@ const Cart = ({singleCardData,hourCount,hourRemaining}) => {
        <div className="w-4/5 mx-auto">
 
         <h2 className="text-xl text-center font-bold text-blue-700 mt-4">Credit Hour Remaining:{hourRemaining}hr
-        <hr /></h2> <br />
+        </h2> <br />
         <hr /><br />
 
         <h2 className="text-xl font-bold">Course Name</h2>
         <ol>
+         
             
         {
-          singleCardData.map(courseName=>(
-          <li key={courseName.id}>{courseName.title}</li>
-            ))
+
+          singleCardData.map((courseName,idx)=>(            
+          <ol key={courseName.id}>{idx+1}.{courseName.title} </ol> ))
+            
             }
             
         </ol>
