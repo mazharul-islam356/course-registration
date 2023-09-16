@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 const Cart = ({singleCardData,hourCount,hourRemaining,priceCount}) => {
-  console.log(priceCount);
 
 
   return (  

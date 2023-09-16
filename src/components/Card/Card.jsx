@@ -12,7 +12,7 @@ const Card = () => {
     const [hourCount,setHourCount] = useState(0)
     const [priceCount,setPriceCount] = useState(0)
     const [hourRemaining,setHourRemaining] = useState(20)
-
+  
  
 
 
@@ -26,7 +26,7 @@ const Card = () => {
         let hourCount = singleCard.credit
         
         if(isExiest){
-          return toast.error('Alredy purchased this course')
+          return toast.error('Alredy select this course')
         }else{
          
           singleCardData.forEach((hour)=>{
@@ -104,8 +104,8 @@ const Card = () => {
       <p><span className="font-bold">Credit:</span> {singleCard.credit}hr</p>
     </div>
   </div>
-  <div className="card-actions">
-    <button onClick={()=>handleSelectbtn(singleCard)} className="btn btn-outline btn-info mt-4">Select</button>
+  <div className="card-actions ">
+    <button onClick={()=>handleSelectbtn(singleCard)} className="btn btn-outline btn-info mt-6 px-24">Select</button>
     <ToastContainer />
   </div>
 </div>
@@ -116,7 +116,7 @@ const Card = () => {
 </div>
     </div>
 
-    <Cart singleCardData={singleCardData} cardData={cardData} hourCount={hourCount} hourRemaining={hourRemaining} priceCount={priceCount}></Cart>
+    <Cart singleCardData={singleCardData} cardData={cardData} hourCount={hourCount} hourRemaining={hourRemaining} priceCount={priceCount} ></Cart>
 
     </div>
     
