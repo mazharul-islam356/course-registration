@@ -10,7 +10,7 @@ const Card = () => {
     const [cardData,setCardData] = useState([])
     const [singleCardData,setSingleCardData] = useState([])
     const [hourCount,setHourCount] = useState(0)
-    let [priceCount,setPriceCount] = useState(0)
+    const [priceCount,setPriceCount] = useState(0)
     const [hourRemaining,setHourRemaining] = useState(20)
 
  
@@ -22,11 +22,11 @@ const Card = () => {
         const isExiest = singleCardData.find((item)=>
         singleCard.id === item.id
         ) 
-        let priceCount = singleCard.price
+       
         let hourCount = singleCard.credit
         
         if(isExiest){
-          return toast('Alredy booked')
+          return toast.error('Alredy purchased this course')
         }else{
          
           singleCardData.forEach((hour)=>{
@@ -38,7 +38,7 @@ const Card = () => {
         
 
        
-        
+        let priceCount = singleCard.price
         if(hourCount >= 20){
            toast('Limited Hours')
         }else{
@@ -46,15 +46,12 @@ const Card = () => {
           const hourRemaining = 20 - hourCount
           setHourRemaining(hourRemaining)
 
-          singleCardData.forEach((prices)=>{
-            priceCount += prices.price
-            setPriceCount(priceCount)
+          singleCardData.forEach((price)=>{
+             priceCount += price.price
+             setPriceCount(priceCount)
           })
+          console.log(priceCount)
         }
-
-        
-        
-        
 
          
     }
@@ -119,7 +116,7 @@ const Card = () => {
 </div>
     </div>
 
-    <Cart singleCardData={singleCardData} hourCount={hourCount} hourRemaining={hourRemaining} priceCount={priceCount}></Cart>
+    <Cart singleCardData={singleCardData} cardData={cardData} hourCount={hourCount} hourRemaining={hourRemaining} priceCount={priceCount}></Cart>
 
     </div>
     
